@@ -1,16 +1,8 @@
 Dictionary = new Mongo.Collection('dictionary');
 
 if (Meteor.isServer) {
-    Meteor.publish('dictionary', function(regex, options, sort, limit) {
-        regex = regex || null;
-        sort = sort   || {word: 1};
-        limit = limit || 10;
-        return Dictionary.find({
-            word: {$regex: regex, $options: options}
-        }, {
-            limit: limit,
-            sort: sort
-        });
+    Meteor.publish('dictionary', function(selector, options) {
+        return Dictionary.find(selector, options);
     });
 
     Meteor.startup(function() {
