@@ -1,4 +1,4 @@
-Dictionary = new Meteor.Collection('dictionary');
+Dictionary = new Mongo.Collection('dictionary');
 
 if (Meteor.isServer) {
     Meteor.publish('dictionary', function(regex, options, sort, limit) {
