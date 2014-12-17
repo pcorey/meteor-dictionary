@@ -30,7 +30,12 @@ if (Meteor.isServer) {
             }
         }
 
-        Dictionary._ensureIndex({word: 'text'});
+        try {
+            Dictionary._ensureIndex({word: 'text'});
+        }
+        catch (error) {
+            console.log('Unable to create index on Dictionary collection:',error.message);
+        }
 
         console.log(Dictionary.find().count()+' entries added to Dictionary');
     });
