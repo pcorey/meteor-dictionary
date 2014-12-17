@@ -1,4 +1,5 @@
 Dictionary = new Mongo.Collection('dictionary');
+api.export('Dictionary');
 
 if (Meteor.isServer) {
     Meteor.publish('dictionary', function(selector, options) {
