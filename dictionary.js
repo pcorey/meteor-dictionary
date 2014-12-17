@@ -30,6 +30,8 @@ if (Meteor.isServer) {
             }
         }
 
+        Dictionary._ensureIndex({word: 'text'});
+
         console.log(Dictionary.find().count()+' entries added to Dictionary');
     });
 }
