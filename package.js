@@ -1,7 +1,7 @@
 Package.describe({
     name: 'pcorey:dictionary',
     summary: 'Creates Dictionary collection populated with Webster\'s Unabridged English Dictionary.',
-    version: '1.0.2',
+    version: '1.0.3',
     git: 'https://github.com/pcorey/meteor-dictionary.git'
 });
 
