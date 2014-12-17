@@ -1,13 +1,13 @@
 Package.describe({
     name: 'pcorey:dictionary',
     summary: 'Creates Dictionary collection populated with Webster\'s Unabridged English Dictionary.',
-    version: '1.0.5',
+    version: '1.0.6',
     git: 'https://github.com/pcorey/meteor-dictionary.git'
 });
 
 Package.onUse(function(api) {
     api.versionsFrom('1.0.1');
-    api.use('mongo', ['server']);
+    api.use('mongo', ['client', 'server']);
     api.addFiles('dictionary.js');
     api.addFiles('dictionary.json', 'server', {isAsset: true});
 });
